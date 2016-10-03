@@ -1,5 +1,3 @@
-/* package codechef; // don't place package name! */
-
 import java.util.*;
 import java.lang.*;
 import java.io.*;
@@ -22,10 +20,10 @@ class Codechef
       System.out.print("\t");
      for(int k=0;k<4;k++)
      {
-      System.out.print("\t"+"Product");
+      System.out.print("\t"+"\t"+"Product");
       System.out.print("\t"+k);
      }
-      System.out.print("total");
+      System.out.print("\t\t"+"total");
       int t=0;
       for(int i =0;i<2;i++){
           int temp=0;
@@ -33,7 +31,7 @@ class Codechef
            System.out.print("SalesPerson #"+i+"\t");
          for(int j=0;j<4;j++){
              temp=temp+arr[i][j];
-             System.out.print(arr[i][j]+"\t"+"\t");
+             System.out.print("\t"+arr[i][j]+"\t"+"\t"+"\t");
 
          }
         
@@ -41,7 +39,7 @@ class Codechef
          System.out.println(temp);
      
      }
-     System.out.print("Total:"+"\t");
+     System.out.print("Total:");
          for(int j=0;j<4;j++)
          {
           int temp=0;
@@ -50,10 +48,32 @@ class Codechef
              temp=temp+arr[i][j];
 
          }
-         System.out.print("\t"+"\t"+temp);
+         System.out.print("\t"+"\t"+"\t"+"\t"+temp);
      }
-      System.out.print("\t"+"\t"+t);
+      System.out.print("\t"+"\t"+"\t"+t);
+      
+       System.out.println("");
+       System.out.print("\t"+"\t"+"\t"+"Max"+"\t"+"SalesPerson");
+       System.out.println("");
+       for(int j=0;j<4;j++)
+         {
+          int largest=arr[0][0];
+          int t2=0;
+          for(int i =0;i<2;i++)
+         {
+           if(arr[i][j] > largest)
+           {
+             largest = arr[i][j];
+             t2=i;
+           }
+
+         }
+         System.out.print("Product"+" #"+j+"\t");
+         System.out.print(largest+"\t"+"#"+t2);
+         System.out.println("");
+         }
      
 }
+
 	
 }
