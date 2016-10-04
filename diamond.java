@@ -1,5 +1,3 @@
-/* package codechef; // don't place package name! */
-
 import java.util.*;
 import java.lang.*;
 import java.io.*;
@@ -8,26 +6,38 @@ class Codechef
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
-	    for (int i = 1; i < 10; i += 2) {
-      for (int j = 0; j < 9 - i / 2; j++)
-        System.out.print(" ");
-
-      for (int j = 0; j < i; j++)
-        System.out.print("*");
-
-      System.out.print("\n");
-    }
-
-    for (int i = 7; i > 0; i -= 2) {
-      for (int j = 0; j < 9 - i / 2; j++)
-        System.out.print(" ");
-
-      for (int j = 0; j < i; j++)
-        System.out.print("*");
-
-      System.out.print("\n");
-    }
+	   int n, i, j, space = 1;
+        Scanner s = new Scanner(System.in);
+        n = s.nextInt();
+       
+        space = n - 1;
+        for (j = 1; j <= n; j++) 
+        {
+            for (i = 1; i <= space; i++) 
+            {
+                System.out.print(" ");
+            }
+            space--;
+            for (i = 1; i <= 2 * j - 1; i++) 
+            {
+                System.out.print("*");                
+            }
+            System.out.println("");
+        }
+        space = 1;
+        for (j = 1; j <= n - 1; j++) 
+        {
+            for (i = 1; i <= space; i++) 
+            {
+                System.out.print(" ");
+            }
+            space++;
+            for (i = 1; i <= 2 * (n - j) - 1; i++) 
+            {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
 
 	}
 }
-
